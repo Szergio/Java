@@ -86,6 +86,5 @@ public class Calculator {
         numb(a);
         numb(b);
         result(c);
-    }
-    
+    }   
 }
