@@ -5,13 +5,23 @@ public class Calculator {
         Scanner choose = new Scanner(System.in);
         while(true){
             int opt = choose.nextInt();
-            switch (opt){
-            case 0:
-                return 0;
-            case 1:
-                return 1;
-            default:
-                System.out.println("Try again...");            
+            int[] opts = {0,1};
+            for(int i=0; i < opts.length; i++){     
+                if(opt<opts.length){
+                    switch (opt){
+                        case 0:
+                            return 0;
+                        case 1:
+                            return 1;           
+                        default:
+                            System.out.println("Try again...");
+                            break;
+                    }
+                }
+                else if(opts[i]!=opt && opts[i] <= opts.length){
+                    System.out.println("Try again...");
+                    break;
+                }
             }
         }  
     }                
@@ -29,7 +39,7 @@ public class Calculator {
             System.exit(0);
         }
         else{
-            System.out.println("Error 101.");}
+            System.out.println("Error showStart(x).");}
     }
     
     static double numb(){
@@ -74,10 +84,10 @@ public class Calculator {
     }
     
     public static void main(String[] args) {
-        System.out.println("Welcome to Calculator 1.0");
+        System.out.println("Welcome to Calculator 1.1");
         showStart();
         showStart(choose());
-        double a,b,c=0;
+        double a,b,c;
         a = numb();
         showMath();
         b = numb();
@@ -86,5 +96,6 @@ public class Calculator {
         numb(a);
         numb(b);
         result(c);
-    }   
+    }
+    
 }
