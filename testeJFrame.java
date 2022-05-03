@@ -1,13 +1,14 @@
 package teste.Interface;
 import java.util.Optional;
 public class testeJFrame extends javax.swing.JFrame {
-   
+    String op = "";
+    double num1 = 0.0;
+    double num2 = 0.0;
+    String result = "";
     public testeJFrame() {
         initComponents();
-    }
+    }    
     
-   
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -330,7 +331,27 @@ public class testeJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_j3ActionPerformed
 
     private void jequalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jequalActionPerformed
-        // TODO add your handling code here:
+        num2 = Double.valueOf(text.getText()).doubleValue();
+        double y = 0;
+        switch(op){
+            case "+":
+                y = num1+num2;
+                result = y+"";
+                text.setText(result);
+            case "-":
+                y = num1+num2;
+                result = y+"";
+                text.setText(result);
+            case "*":
+                y = num1+num2;
+                result = y+"";
+                text.setText(result);
+            case "/":
+                y = num1+num2;
+                result = y+"";
+                text.setText(result);
+
+        }
     }//GEN-LAST:event_jequalActionPerformed
 
     private void jdeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdeleteActionPerformed
@@ -347,31 +368,36 @@ public class testeJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jdeleteActionPerformed
 
     private void jpointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpointActionPerformed
-        String a = jpoint.getText();
-        text.setText(text.getText()+a);
+        op = jpoint.getText();
+        num1 = Double.valueOf(text.getText()).doubleValue();
+        text.setText("");
     }//GEN-LAST:event_jpointActionPerformed
 
     private void jdivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdivActionPerformed
-        String a = jdiv.getText();
-        text.setText(text.getText()+a);
+        op = jdiv.getText();
+        num1 = Double.valueOf(text.getText()).doubleValue();
+        text.setText("");
     }//GEN-LAST:event_jdivActionPerformed
 
     private void jmultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmultActionPerformed
-        String a = jmult.getText();
-        text.setText(text.getText()+a);
+        op = jmult.getText();
+        num1 = Double.valueOf(text.getText()).doubleValue();
+        text.setText("");
     }//GEN-LAST:event_jmultActionPerformed
 
     private void jsubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jsubActionPerformed
-        String a = jsub.getText();
-        text.setText(text.getText()+a);
+        op = jsub.getText();
+        num1 = Double.valueOf(text.getText()).doubleValue();
+        text.setText("");
     }//GEN-LAST:event_jsubActionPerformed
 
     private void jsumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jsumActionPerformed
-        String a = jsum.getText();
-        text.setText(text.getText()+a);
+        op = jsum.getText();
+        num1 = Double.valueOf(text.getText()).doubleValue();
+        text.setText("");
     }//GEN-LAST:event_jsumActionPerformed
 
-  
+
     public static void main(String args[]) {
  
         System.out.println("Versão beta!");
