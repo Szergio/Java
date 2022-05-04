@@ -1,33 +1,42 @@
 package start;
-
 import java.util.Scanner;
 
 public class Test1 {
+    static void menu(double v){
+        System.out.println("-> Welcome to test1!");
+        System.out.printf("-> Version - %.1f",v);
+        System.out.println("");
+    } //View menu
     
-    static int output(){
+    static double output(){
         Scanner reader = new Scanner(System.in);
-        System.out.println("Insert number:");
-        int numb = reader.nextInt();
+        System.out.println("-> Insert number:");
+        double numb = reader.nextInt();
         return numb;
-    }
+    } // Output numb
     
-    static int soma(int a,int b){
+    static double sum(double a,double b){
         return a+b;
-    }
+    } //Sum
     
-    static void show(int c){
-        System.out.printf("Sum = %d",c);
-    }
+    static void show(double c){
+        System.out.printf("-> Sum = %.1f",c);
+        System.out.println("");
+    } //Result
     
     static void jump(){
         System.out.println("");
-    }
+    } //Next line
     
     public static void main(String[] args) {
-        int x = output();
-        int y = output();
-        System.out.printf("Your numb are %d and %d.",x,y);
+        double versionTest = 1.1;
+        menu(versionTest);
+        double x = output();
+        System.out.printf("-> %.1f + ",x);
+        double y = output();
+        System.out.printf("-> Your numb are %.1f and %.1f",x,y);
         jump();
-        show(soma(x,y));          
+        show(sum(x,y));       
+        System.out.println("-> Thanks for testing!");
     }
 }
